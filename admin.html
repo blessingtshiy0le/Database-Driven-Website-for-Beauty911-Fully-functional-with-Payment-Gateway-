@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-YQQUDZpPmG/Jzwyf+qaex8V6RbcJyO83lIMFZJ7v3Nz/JB3A4xHmwe9cH4ws4Azr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <style>       
+        /* Center the content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+        }
+
+        /* Style for the admin panel */
+        .admin-panel {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Style for input boxes and text areas */
+        input[type="text"],
+        textarea,
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px; /* Added more space */
+            border: 1px solid #000;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+        }
+
+        /* Style for buttons */
+        button {
+            padding: 10px 20px;
+            background-color: #fee3ec;
+            color: #000000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Added space */
+        }
+
+        button:hover {
+            background-color: #ffffff;
+        }
+
+        /* Style for the link button */
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fee3ec;
+            color: #000000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 10px; /* Added space */
+        }
+
+        .link-button:hover {
+            background-color: #ffffff;
+        }
+
+        /* Additional styles for spacing */
+        .section-divider {
+            margin: 40px 0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="admin-panel">
+            <h1>Add A Product</h1>
+            <form action="add_product.php" method="post" enctype="multipart/form-data">
+                <label for="service_page">Service Page:</label>
+                <select id="service_page" name="service_page">
+                    <option value="Hair Care">Hair Care</option>
+                    <option value="Nails">Nails</option>
+                    <option value="Facial Treatments">Facial Treatments</option>
+                    <option value="IV Therapy">IV Therapy</option>
+                    <option value="Makeup">Makeup</option>
+                    <option value="Eyelash Extensions">Eyelash Extensions</option>
+                </select><br>
+                
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required><br>
+                
+                <label for="product_description">Product Description:</label>
+                <textarea id="product_description" name="product_description" required></textarea><br>
+                
+                <label for="product_price">Product Price:</label>
+                <input type="text" id="product_price" name="product_price" required><br>
+                
+                <label for="product_image">Product Image:</label>
+                <input type="file" id="product_image" name="product_image" required><br>
+                
+                <button type="submit">Add Product</button>
+            </form>
+
+            <div class="section-divider"></div>
+
+            <h2>Delete A Product</h2>
+            <form action="delete_product.php" method="post">
+                <label for="product_id">Product ID:</label>
+                <input type="text" id="product_id" name="product_id" required><br>
+                
+                <button type="submit">Delete Product</button>
+            </form>
+            
+            <a href="product_list.php" class="link-button">View Product ID's</a>
+            <a href="admin_orders.php" class="link-button">View Orders</a>
+            <a href="edit_service.php" class="link-button">Edit A Service</a>
+            <a href="add_post.php" class="link-button">Add/Delete a Blog</a>
+            <a href="edit_promotions.php" class="link-button">Edit Promotions</a>
+            <a href="ivdrips_forms.php" class="link-button">View IV Forms</a>
+        </div>
+    </div>
+</body>
+</html>

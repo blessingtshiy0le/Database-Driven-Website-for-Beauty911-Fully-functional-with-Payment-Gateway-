@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>IV Drip Consent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    .consent-form-container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 250px auto; /* Adjusted margin */
+      max-width: 900px;
+      padding: 50px;
+      width: 100%;
+    }
+    .consent-form {
+      background: #fff;
+      padding: 2rem;
+      border: 3px solid #000;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .consent-form h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .consent-form h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .consent-form ul {
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+    .consent-form ul li {
+      margin-bottom: 0.5rem;
+    }
+    .consent-form button {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .consent-form .btn-yes {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .consent-form .btn-no {
+      background-color: #dc3545;
+      color: #fff;
+    }
+    .signature-pad {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="main-info">
+        <div class="container">
+          <div class="row">
+            <h1 class="logo">
+              <a href="#">
+                <img src="images/logo.png" class="logo-light" />
+              </a>
+            </h1>
+            <div class="contact">
+              <div class="contact-icon">
+                  <i class="fas fa-gift"></i> <!-- Use "fas" for Font Awesome Solid style -->
+              </div>
+              <div class="contact-main">
+                  <a href="promotions.php">Promotions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-nav">
+        <div class="container">
+          <nav>
+            <div>
+              <a href="index.html" class="active"><i class="fa-solid fa-house"></i>HOME</a>
+            </div>
+            <div>
+              <a href="haircare.php">Hair Care</a>
+            </div>
+            <div>
+              <a href="facials.php">Facial Treatments (Teens Only)</a>
+            </div>
+            <div>
+              <a href="nails.php">Nails</a>
+            </div>
+            <div>
+              <a href="ivdrips.php">IV Therapy</a>
+            </div>
+            <div>
+              <a href="makeup.php">Makeup</a>
+            </div>
+            <div>
+              <a href="eyelashextension.php">Eyelash Extensions</a>
+            </div>
+            <div class="search">
+              <a href="cart.php" class="cart-button">
+                <i class="fas fa-shopping-cart"></i>Cart
+              </a>              
+            </div>
+          </nav>
+        </div>
+      </div>
+  </header>
+<div class="consent-form-container">
+  <form class="consent-form" action="ivdrip_consent.php" method="post">
+    <h2>IV Drip Consent Form</h2>
+    <p>Before receiving an IV drip treatment, we require your consent to ensure your safety and well-being. Please read the following information carefully and sign below to acknowledge your understanding.</p>
+    
+    <h3>Treatment Information</h3>
+    <p>The IV drip treatment is a non-invasive, intravenous infusion of vitamins, minerals, and other nutrients designed to provide various health benefits. The treatment is administered by a trained professional and typically takes 30-60 minutes to complete.</p>
+    
+    <h3>Risks and Complications</h3>
+    <p>While IV drip treatments are generally considered safe, there are some potential risks and complications to be aware of:</p>
+    <ul>
+      <li>- Allergic reactions to the ingredients</li>
+      <li>- Infection from improper needle insertion</li>
+      <li>- Nausea, dizziness, or headaches due to the infusion</li>
+      <li>- Temporary bruising or swelling at the injection site</li>
+    </ul>
+    
+    <h3>Your Consent</h3>
+    <p>By signing below, you acknowledge that you have read and understood the information provided. You also confirm that you are aware of the potential risks and complications associated with the IV drip treatment.</p>
+    
+    <h3>Terms and Conditions</h3>
+    <p>
+      1. <strong>Limitation of Liability</strong>: Beauty911 mobile salon is not responsible for any damages or injuries resulting from the IV drip treatment.<br>
+      2. <strong>Cancellation Policy</strong>: If you need to cancel or reschedule your appointment, please notify us at least 24 hours in advance to avoid any charges.
+    </p>
+
+    <h3>Underlying Health Conditions</h3>
+    <p>Please indicate if you have any underlying health conditions:</p>
+    <input type="radio" id="yes" name="underlying_conditions" value="yes">
+    <label for="yes">Yes</label><br>
+    <input type="radio" id="no" name="underlying_conditions" value="no">
+    <label for="no">No</label><br>
+    
+      <h3>Signature</h3>
+      <p>I, <input type="text" name="your_name" placeholder="Your Name">, hereby give my consent to receive the IV drip treatment from Beauty911 mobile salon. I understand the potential risks and complications associated with the treatment and acknowledge that I have read and understood the information provided.</p>
+      <!-- Signature Pad canvas element -->
+      <canvas id="signature-pad" class="signature-pad" width="400" height="200"></canvas>
+      <!-- Hidden input to store the signature data -->
+      <input type="hidden" name="signature" id="signature-data">
+      
+      <button type="submit" name="consent" value="yes" class="btn-yes">Yes</button>
+      <button type="submit" name="consent" value="no" class="btn-no">No</button>
+    </form>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+  <script>
+    // Initialize Signature Pad
+    var canvas = document.getElementById('signature-pad');
+    var signaturePad = new SignaturePad(canvas, {
+      backgroundColor: 'rgb(255, 255, 255)' // set background color of signature pad
+    });
+  
+    // Handle form submission
+    document.querySelector('.consent-form').addEventListener('submit', function(e) {
+      // Prevent the form from submitting normally
+      e.preventDefault();
+      
+      // Check if the signature pad is empty
+      if (signaturePad.isEmpty()) {
+        alert('Please provide your signature.');
+        return;
+      }
+      
+      // Save signature data as a base64-encoded image
+      var signatureData = signaturePad.toDataURL();
+      
+      // Set the value of the hidden input field to the signature data
+      document.getElementById('signature-data').value = signatureData;
+      
+      // Submit the form
+      this.submit();
+    });
+  </script>
+
+  <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="footer-logo">
+                <a href="#">
+                    <img src="images/logo.png" class="logo-light" />
+                </a>
+            </div>
+            <ul class="sns">
+                <li class="icon-fb">
+                    <a href="facebook.html"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="icon-twitter">
+                    <a href="twitter.html"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="icon-instagram">
+                    <a href="https://www.instagram.com/beauty911_mobilesalon/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="icon-pinterest">
+                    <a href="https://wa.me/+27743574899"><i class="fab fa-whatsapp"></i></a>
+                </li>
+            </ul>
+        </div>          
+            <div class="col-4">
+                <h3>CONTACT US</h3>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-main">
+                        <a href="tel:+27743574899">+27 74 357 4899</a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-main">
+                        <a href="https://maps.google.com/maps?q=425+Granite+Crescent,+Centurion">425 Granite Crescent, Centurion</a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-main">
+                        <a href="mailto:info@beauty911.co.za">Admin@beauty911.co.za</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+              <h3>Stay In Touch</h3>
+              <p>Enter your email address to receive up-to-date news on services & more.</p>
+              <form action="subscribers.php" method="post">
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="email" placeholder="Your e-mail..." />
+                      <button class="submit-btn" type="submit">Subscribe</button>
+                  </div>
+              </form>
+          </div>            
+          <div class="row">
+            <div class="copyright">© 2024 Built by <a href="https://www.linkedin.com/in/blessing-tshiyole-2a5195209">Blessing Tshiyole</a></div>
+        </div>          
+    </div>
+  </footer>
+</body>
+</html>

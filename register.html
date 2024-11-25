@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-YQQUDZpPmG/Jzwyf+qaex8V6RbcJyO83lIMFZJ7v3Nz/JB3A4xHmwe9cH4ws4Azr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <style>
+        /* Center the content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style for the login form */
+        .registration-form {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Style for input boxes */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Style for buttons */
+        button {
+            padding: 10px 20px;
+            background-color: #fee3ec;
+            color: #000000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h1>Register Admin</h1>
+            <form action="register.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
